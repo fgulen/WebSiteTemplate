@@ -2,41 +2,35 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
-    color: #222;
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.4;
+@import "__spacing.css"; /* Using Tachyons spacing */
+
+html,
+body {
+  color: #222;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  height: 100%;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
-
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
@@ -51,71 +45,86 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+main {
+  flex: 1;
+  overflow: auto;
+}
+
+/* The hero image */
+.hero-image {
+  margin: 0 0;
+  background-image: url("../img/hi2x.jpg");
+  height: 480px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.header__logo {
+  height: 32px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.footer__items a {
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+}
 
 /* ==========================================================================
-  Your CSS here 
+  Add your CSS here 
    ========================================================================== */
 
-header{
-   margin: 0 122px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-content: center;
-   height: 80px;
+section {
+  height: 300px;
+  overflow: auto;
+  border-bottom: 2px solid;
+  background: lightpink;
 }
 
-header > * {
-    margin: 22px 0;
-}
 
-header img {
-    height: 32px;
-}
 
-.box {
-    background-color: cadetblue;
-    height: 45vw;
 
-}
 
-footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 122px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    height: 80px;
-    border-top: solid;
-    border-color: #000;
-    border-width: 3px; 
-}
 
-.footer__item {
-    float: left;
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #000
 
-}
 
-.footer__social > * {
-    margin-top: 20px;
-    margin-right: 20px;
-}
 
-/*
+
+
+
+
+/* ========================================================================== ========================================================================== */
+
+
+
+   /*
  * Clearfix: contain floats
  *
  * For modern browsers
@@ -129,27 +138,10 @@ footer{
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  clear: both;
 }
