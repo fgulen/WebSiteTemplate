@@ -64,7 +64,7 @@ main {
 /* The hero image */
 .hero-image {
   margin: 0 0;
-  background-image: url("../img/hi2x.jpg");
+  background-image: url("../img/hero-beach.jpg");
   height: 480px;
   background-repeat: no-repeat;
   background-size: cover;
