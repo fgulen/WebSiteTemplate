@@ -19,7 +19,7 @@ You are to treat this challenge as if you are working as a front end developer a
 
 ## 	✅ Challenge
 
-- [] Build Homepage (**HTML/CSS**)
+- [ ] Build Homepage (**HTML/CSS**)
     - [x] Header 
     - [ ] What we fund
     - [ ] Our Mission
@@ -27,11 +27,11 @@ You are to treat this challenge as if you are working as a front end developer a
     - [ ] Technologies
     - [x] Footer
 
-- [] Add a Hamburger Menu, which provides access to each section. (**JS**)
+- [ ] Add a Hamburger Menu, which provides access to each section. (**JS**)
 
-- [] Banana Tax Calculator(**JS**) *Coming soon*
+- [ ] Banana Tax Calculator(**JS**) *Coming soon*
 
-❗ We highly encourage you to use Flexbox or CSS Grid for this Challenge. 
+❗We highly encourage you to use Flexbox or CSS Grid for the challenge. 
 
 ### 🐙 Git Commits
 
