@@ -32,7 +32,7 @@ You are to treat this challenge as if you are working as a front end developer a
 
 - [ ] Banana Tax Calculator(**JS**) *Coming soon*
 
-❗We highly encourage you to use Flexbox or CSS Grid for the challenge. 
+❗Third-party libaries like JQuery etc are not allowed. We highly encourage you to use Flexbox or CSS Grid for the challenge. 
 
 ### 🐙 Git Commits
 
