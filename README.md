@@ -20,7 +20,8 @@ You are to treat this challenge as if you are working as a front end developer a
 ## 	✅ Challenge
 
 - [ ] Build Homepage (**HTML/CSS**)
-    - [x] Header 
+    - [x] Header
+    - [ ] Hero Image
     - [ ] What we fund
     - [ ] Our Mission
     - [ ] Communities
