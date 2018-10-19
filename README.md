@@ -10,7 +10,7 @@ This is the Front End Challenge repository.
 You are to treat this challenge as if you are working as a front end developer at a web development agency. You are tasked to turn a designer mockup into code with HTML/CSS and JavaScript.
 
 ## 🗂 Provided Assets
-- Designfile ([Figma](https://www.figma.com/file/Y9zKhjbgHYD5ft5OLrggYjw8/Banana_Foundation_Challenge?node-id=0%3A1)/[PDF]()):  This file shows you what the page should like and its content.
+- Designfile ([Figma](https://www.figma.com/file/Y9zKhjbgHYD5ft5OLrggYjw8/Banana_Foundation_Challenge?node-id=0%3A1)/[PDF](docs/designfile.pdf)):  This file shows you what the page should like and its content.
 - [Style Guide](docs/bf_styleguide.pdf):  This file will help you to identify font sizes, font families and colors across the site.
 - `index.html`: This file will contain your HTML code. It includes the required  HTML boilerplate code.
 - `main.css`: This file will contain your CSS and some boilerplate code.  
