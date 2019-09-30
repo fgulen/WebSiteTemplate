@@ -19,31 +19,103 @@
 <body>
   <div id="container">
     <header>
+      <div>
       <img class="header__logo" src="./img/bf_logo.svg" alt="Banana Foundation Logo">
-      <i class="fas fa-bars fa-lg"></i>
+      <i class="fas fa-bars fa-2x" onclick="toggleNav()"></i>
+      </div>
     </header>
     <!-- Add your site or application content here -->
+
     <main>
-      <section class="hero-image"></section>
-      <section>What we fund</section>
-      <section>Our Mission</section>
-      <section>Communites</section>
-      <section>Technologies</section>
-      
-      
-      <footer>
-        <nav class="footer__items">
-          <a href="#">Contact</a>
-          <a class="pl3" href="#">Terms</a>
-          <a class="pl3" href="#">Privacy</a>
-        </nav>
-        <div>
-          <i class="fab fa-facebook-square fa-2x"></i>
-          <i class="pl3 fab fa-twitter-square fa-2x"></i>
-          <i class="pl3 fab fa-instagram fa-2x"></i>
-          <i class="pl3 fab fa-youtube-square fa-2x"></i>
+      <div class="toggle-menu">
+          <nav class="sidebar">
+              <ul>
+                <li><a href="#whatwefund">what we fund</a></li>
+                <li><a href="#ourmission">our mission</a></li>
+                <li><a href="#communities">communities</a></li>
+                <li><a href="#technologies">technologies</a></li>
+              </ul>
+          </nav>
+      </div>
+
+      <section class="hero-image">
+        <div class="motto">
+        <h1><span>Banana Foundation Grant Award Announcement 2019</span></h1>
         </div>
-      </footer>
+      </section>
+
+      <div class="wraper">
+        <section id="whatwefund" class="whatwefund">
+              <div class="wwf"><h2>What We Fund</h2></div>
+              <div class="wwf-a wwf-d">Communites</div>
+              <div class="wwf-b wwf-d">Technologies</div>
+              <div class="wwf-c">Learn more</div>
+              <div class="wwf-c">Learn more</div>
+        </section>  
+
+        <section id="ourmission" class="ourmission">
+              <div class="ourmission-a"><h2>Our Mission</h2><p>Banana Foundation is an international foundation with strong local roots. We invest in communities, and new technologies. Our goal is to foster informed and engaged communities, which we believe are essential for a healthy bananas.</p></div>
+              <div class="ourmission-b"></div>
+        </section>
+
+        <section id="communities" class="communities">
+            <div class="communities-first">
+                    <div><h2>Communites</h2></div>
+                    <div class="pr"><p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, dolores labore excepturi in expedita quaerat! </p></div>
+                    <button>LEARN MORE</button>
+            </div>
+
+            <div class="communities-second">
+                  <div class="communities-a"><h3 class="com-h">COMMUNITIES/ARTICLE</h3>
+                        <p class="com-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, tempore fuga inventore sunt ab.</p>
+                        <div class="com-image-a"></div>
+                  </div>
+                  <div class="communities-b"><h3 class="com-h">COMMUNITIES/ARTICLE</h3>
+                        <p class="com-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, tempore fuga inventore sunt ab.</p>
+                        <div class="com-image-b"></div>
+                  </div>
+                  <div class="communities-c"> <h3 class="com-h">COMMUNITIES/ARTICLE</h3>
+                        <p class="com-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, tempore fuga inventore sunt ab.</p>
+                  </div>
+            </div>          
+        </section>
+
+        <section id="technologies" class="technologies">
+            <div class="technologies-first">
+                    <div><h2>Technologies</h2></div>
+                    <div class="pr"><p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, dolores labore excepturi in expedita quaerat! </p></div>
+                    <button>LEARN MORE</button>
+            </div>
+            <div class="technologies-second">
+                    <div class="technologies-a"><h3 class="tech-h">TECHNOLOGIES/ARTICLE</h3>
+                          <p class="tech-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, tempore fuga inventore sunt ab.</p>
+                          <div class="tech-image-a"></div>
+                    </div>
+                    <div class="technologies-c"> <h3 class="tech-h">TECHNOLOGIES/ARTICLE</h3>
+                          <p class="tech-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, tempore fuga inventore sunt ab.</p>
+                    </div>
+                    <div class="technologies-b"><h3 class="tech-h">TECHNOLOGIES/ARTICLE</h3>
+                      <p class="tech-p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, tempore fuga inventore sunt ab.</p>
+                      <div class="tech-image-b"></div>
+                </div>
+            </div>   
+        </section>
+      
+      
+        <footer>
+          <nav class="footer__items">
+            <a href="#">Contact</a>
+            <a class="pl3" href="#">Terms</a>
+            <a class="pl3" href="#">Privacy</a>
+          </nav>
+          <div class="social">
+            <i class="fab fa-facebook-square fa-2x"></i>
+            <i class="pl3 fab fa-twitter-square fa-2x"></i>
+            <i class="pl3 fab fa-instagram fa-2x"></i>
+            <i class="pl3 fab fa-youtube-square fa-2x"></i>
+          </div>
+       </footer>
+      </div>
     </main>
   </div>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"

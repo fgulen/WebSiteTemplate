@@ -1,8 +1,53 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+   @import"normalize.css"; 
+   @import "__spacing.css"; /* Using Tachyons spacing */
+   
 
-@import "__spacing.css"; /* Using Tachyons spacing */
+:root{
+  --brand-01:#f2c94c;
+  --brand-02:#83afed;
+  --button-01:#000;
+}
+h1{
+  font-weight: bold;
+  font-size: 3rem;
+}
+h2{
+  text-transform: uppercase;
+  font-weight:bold;
+  font-size: 34px;
+  text-align: left;
+  line-height: 40px;
+}
+h3{
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  line-Height: 28px;
+}
+p{
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+  line-Height: 28px;
+}
+button{
+  box-sizing: border-box;
+  background: var(--button-01);
+  color: white;
+  padding-left: 19px;
+  width: 224px;
+  height: 78px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 111px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+
 
 html,
 body {
@@ -13,17 +58,14 @@ body {
   margin: 0;
   height: 100%;
 }
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
 hr {
   display: block;
   height: 1px;
@@ -32,13 +74,11 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * 
  */
-
 audio,
 canvas,
 iframe,
@@ -46,8 +86,9 @@ img,
 svg,
 video {
   vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
-
 #container {
   display: flex;
   flex-direction: column;
@@ -55,34 +96,86 @@ video {
   max-width: 1440px;
   margin: 0 auto;
 }
-
 main {
   flex: 1;
-  overflow: auto;
+  flex-direction: column;
 }
-
 /* The hero image */
 .hero-image {
+  display: flex;
+  flex-direction: row;
   margin: 0 0;
   background-image: url("../img/hero-beach.jpg");
-  height: 480px;
+  height: 580px;
+  width: 1440px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-
-header {
+header > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 81px;
 }
-
+.fa-bars{
+  cursor: pointer;
+  position: relative;
+  right:121px ;
+}
+.fa-bars:hover{
+  opacity: 0.5;
+}
+.toggle-menu{
+  position: relative;
+  z-index: 10000;
+}
+.sidebar{
+  position: absolute;
+  z-index: 1000;
+  right: 121px;
+  margin-top: 0;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar ul{
+  list-style: none;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-left: 23px;
+  padding-right: 18px;
+  padding-top: 31px;
+  padding-bottom: 26px;
+  overflow: hidden;
+  z-index: 1000;
+  visibility: hidden;
+  margin-top: 0px;
+  background: white;
+  transition: all 0.1s ease-in-out;
+}
+.sidebar ul li{
+  text-decoration: none;
+  line-height: 60px;
+  transition: all 0.2s ease-in-out;
+}
+.sidebar ul li a{
+  text-decoration: none;
+  line-height: 60px;
+  white-space: nowrap;
+  color: black;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.sidebar ul li a:hover{
+  opacity: 0,5;
+}
 .header__logo {
   height: 32px;
+  position: relative;
+  left:121px;
 }
-
 footer {
   display: flex;
   flex-direction: row;
@@ -90,35 +183,406 @@ footer {
   align-items: center;
   height: 64px;
 }
-
 .footer__items a {
   font-weight: 500;
   color: #222;
   text-decoration: none;
 }
-
 /* ==========================================================================
   Add your CSS here 
    ========================================================================== */
 
 section {
-  height: 300px;
   overflow: auto;
   border-bottom: 2px solid;
-  background: lightpink;
+}
+.wraper{
+  max-width: 1196px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-image{
+  border-bottom: none;
+}
+.motto{
+  margin-top: 144px;
+  margin-left: 120px;
+  width: 463px;
+  
+}
+h1{
+  width: 297px;
+}
+.motto h1{
+  display: inline;
+  background:white;
+  padding: 8px 8px 8px 0px;
+}
+h1>span {
+  background-color:white;line-height:1;
+   padding:10px 15px 10px 0px;
+  }
+h1 span {
+  box-shadow: 20px 0 0px 0px white, 
+  -10px 0 0px 0px white;
+}
+.whatwefund{
+  display: grid;
+  height: 370px;
+  padding-top: 54px;
+  padding-bottom: 96px;
+  grid-column-gap:15px;
+}
+.wwf{
+  grid-column: span 2;
+  margin-bottom: 47px;
+  height: 86px;
+  width: auto;
+}
+.wwf-c{
+  background: black;
+  color:white;
+  padding-left:20px;
+  height: 59px;
+  width: auto;
+  display: flex;
+  padding-left: 24px;
+  align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.wwf-a{
+  background: var(--brand-01);
+  height: 100%;
+}
+.wwf-b{
+  background: var(--brand-02);
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.wwf-d{
+  display: grid;
+  align-items: end;
+  height: 157px;
+  width: auto;
+  padding-left: 24px;
+  padding-bottom: 21px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.ourmission{
+  display:flex;
+  padding-top: 23px;
+  height: 492px;
+}
+.ourmission-a{
+  width: 800px;
 }
 
+.ourmission-a > h2{
+  margin-top: 51px;
+}
 
+.ourmission-a > p{
+  height: 197px;
+  width: auto;
+  padding-right: 110px;
+}
 
+.ourmission-b{
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/mission-group-img.jpg");
+  height: 313px;
+  margin-right: 0px;
+  width: 483px;
+  margin-top: 51px;
+}
+.communities{
+  height: 1037px;
+  margin: 0px;
+}
+.pr{
+  width: 600px;
+}
+.btn{
+  margin-top: 24px;
+  margin-bottom: 111px;
+}
+.communities-first h2{
+  margin-top: 72px;
+}
+.communities-second{
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.communities-a{
+  display: flex;
+  flex-direction: column;
+  height: 562px;
+  width: 346px;
+  background: var(--brand-01);
+}
+.com-image-a{
+  background: url("../img/communities-img-1.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 500px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  border:none;
+}
+.com-image-b{
+  background: url("../img/communities-img-2.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 500px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+.communities-b{
+  display: flex;
+  height: 562px;
+  width: 345px;
+  flex-direction: column;
+  background:var(--brand-01);
+}
+.communities-c{
+  display: flex;
+  flex-direction: column;
+  height: 562px;
+  width: 345px;
+  background:var(--brand-01);
+}
+.com-p{
+  padding-left: 20px;
+  font-weight: bolder;
+}
+.com-h{
+  padding-left: 20px;
+  color: rgb(71, 70, 70);
+  font-weight: 400;
+}
+.technologies{
+  height: 1037px;
+}
+.technologies-first{
+  height: 365px;
+  margin-top: 70px;
+}
+.technologies-second{
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.technologies-a{
+  display: flex;
+  height: 562px;
+  width: 346px;
+  flex-direction: column;
+  background: var(--brand-02);
+}
+.tech-image-a{
+  background: url("../img/technologies-img-1.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 500px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+.tech-image-b{
+  background: url("../img/technologies-img-2.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 500px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+.technologies-b{
+  display: flex;
+  height: 562px;
+  width: 345px;
+  flex-direction: column;
+  background:var(--brand-02);
+}
+.technologies-c{
+  display: flex;
+  flex-direction: column;
+  height: 562px;
+  width: 345px;
+  background:var(--brand-02);
+}
+.tech-p{
+  padding-left: 20px;
+  font-weight: bolder;
+}
+.tech-h{
+  padding-left: 20px;
+  color: rgb(71, 70, 70);
+  font-weight: 400;
+}
+footer{
+  height: 79px;
+  margin-bottom: 57px;
+}
+.footer__items a{
+  display: inline-flex;
+  padding: 0px 20px;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  width:300px;
+  margin-right:0px;
+  justify-content: space-between;
+}
 
+  /* iphone 6/7/8/X
+     iphone 6/7/8 Plus
+ */
+@media (max-width: 700px){
 
+  .toggle-menu{
+    position:static ;
+  }
+  .fa-bars{
+    right:40px ;
+  }
+  .header__logo {
+    height: 32px;
+    position: relative;
+    left:40px;
+  }
+  .sidebar{
+    right: 40px;
+  }
+  .hero-image {
+    background-image: url("../img/hero-beach_768.jpg");
+    height: auto;
+    width: 100%;
+  }
+  .motto{
+    margin:40px;
+    text-align: center;
+    width: 463px;
+    height: 297px;
+  }
+  .motto h1{
+    font-size:8vw;
+  }
+  h2{
+    text-align: center;
+  }
+  .ourmission{
+    display:flex;
+    flex-direction: column;
+    height: 600px;
+    padding: 15px;
+  }
+  .ourmission-a{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ourmission-a > p{
+    height: 197px;
+    width: auto;
+    padding-right: 0px;
+  }
+  .ourmission-b{
+    width: auto;
+    margin-top: 200px;
+  }
+  .communities{
+    height: 2400px;
+    margin: 0px;
+  }
+  .pr{
+    margin-bottom: 60px;
+  }
+  .communities-first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+  }
 
+  .communities-second{
+    display: flex;
+    flex-direction: column;
+  }
 
+  .communities-a, .communities-b, .communities-c, .technologies-a, .technologies-b,.technologies-c {
+    height: 100%;
+    width: auto;
+  }
 
+  .pr{
+    padding: 15px;
+  }
+  .technologies h3{
+    text-align: center;
+  }
+  .communities h3{
+    text-align: center;
+  }
+  .technologies{
+    height: 2400px;
+    margin: 0px;
+  }
+  .pr{
+    width: auto;
+  }
+  .technologies-first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+   
+  }
+  
+  .technologies-second{
+    display: flex;
+    flex-direction: column;
+  }
+  .technologies h3{
+    text-align: center;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    height: 79px;
+  }
 
-
-
-
+  .footer__items a{
+    display: inline-block;
+    padding: 35px;
+  }
+  
+  .social{
+    display: inline-flex;
+    padding-bottom: 40px;
+  }
+}
 
 /* ========================================================================== ========================================================================== */
 
